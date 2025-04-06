@@ -1,0 +1,150 @@
+epoch 40 :
+Train Loss: 0.7857
+Val Loss: 0.7788
+FID: 414.59 | IS: 1.21±0.26
+SSIM: 0.3109 | PSNR: 3.95 dB
+
+
+Epoch 50 :
+Train Loss: 0.7772
+Val Loss: 0.7711
+
+
+epoch 60 :
+Train Loss: 0.7671
+Val Loss: 0.7621
+FID: 394.13 | IS: 1.17±0.17
+SSIM: 0.1671 | PSNR: 4.99 dB
+
+
+Epoch 70 :
+Train Loss: 0.7584
+Val Loss: 0.7533
+
+
+Epoch 78 :
+Train Loss: 0.7545
+Val Loss: 0.7494
+
+
+Epoch 80 :
+Train Loss: 0.7789
+Val Loss: 0.7805
+FID: 395.01 | IS: 1.27±0.16
+SSIM: 0.1610 | PSNR: 4.56 dB
+
+Epoch 90 :
+Train Loss: 0.7541
+Val Loss: 0.7507
+
+Epoch 100
+Train Loss: 0.7535
+Val Loss: 0.7474
+FID: 426.46 | IS: 1.53±0.23
+SSIM: 0.0567 | PSNR: 4.99 dB
+
+
+Epoch 110
+Train Loss: 0.7515
+Val Loss: 0.7473
+
+
+Epoch 120
+Train Loss: 0.7497
+Val Loss: 0.7461
+
+
+Epoch 130
+Train Loss: 0.7489
+Val Loss: 0.7457
+
+
+Epoch 140
+Train Loss: 0.7483
+Val Loss: 0.7449
+
+
+Epoch 150
+Train Loss: 0.7480
+Val Loss: 0.7451
+FID: 470.36 | IS: 1.20±0.07
+SSIM: 0.0392 | PSNR: 4.88 dB
+
+
+Epoch 160
+Train Loss: 0.7473
+Val Loss: 0.7444
+
+
+Epoch 170
+Train Loss: 0.7471
+Val Loss: 0.7441
+
+
+Epoch 180
+Train Loss: 0.7468
+Val Loss: 0.7437
+
+
+Epoch 190
+Train Loss: 0.7465
+Val Loss: 0.7437
+
+
+Epoch 200
+Train Loss: 0.7460
+Val Loss: 0.7433
+FID: 436.39 | IS: 1.19±0.14
+SSIM: 0.0623 | PSNR: 4.30 dB
+
+
+Epoch 210
+Train Loss: 0.7466
+Val Loss: 0.7434
+
+
+Epoch 220
+Train Loss: 0.7455
+Val Loss: 0.7424
+
+
+Epoch 230
+Train Loss: 0.7465
+Val Loss: 0.7426
+
+
+Epoch 240
+Train Loss: 0.7452
+Val Loss: 0.7436
+
+
+Epoch 260
+Train Loss: 0.7452
+Val Loss: 0.7431
+
+
+Epoch 270
+Train Loss: 0.7446
+Val Loss: 0.7425
+
+
+Epoch 280
+Train Loss: 0.7454
+Val Loss: 0.7432
+
+
+Epoch 290
+Train Loss: 0.7448
+Val Loss: 0.7429
+
+
+Epoch 300
+Train Loss: 0.7449
+Val Loss: 0.7428
+FID: 516.43 | IS: 1.12±0.06
+SSIM: 0.0292 | PSNR: 4.63 dB
+
+
+Final Test Metrics:
+FID: 404.35 | IS: 1.21±0.16
+SSIM: 0.1620 | PSNR: 4.78 dB
