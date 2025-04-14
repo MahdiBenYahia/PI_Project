@@ -27,10 +27,7 @@ Here is a summary table of the models used in this project, along with their arc
 | **CNN + ViT**         | 90%            | 89%           | 91%             | 89%            | 92%          | 90%         |
 | **Swin Transformer**  | 92%            | 91%           | 93%             | 90%            | 94%          | 92%         |
 | **ResNet50**          | 86%            | 85%           | 85%             | 83%            | 88%          | 86%         |
-| **VGG16**             | 84%            | 82%           | 83%             | 80%            | 85%          | 83%         |
-| **InceptionV3**       | 89%            | 88%           | 90%             | 87%            | 91%          | 89%         |
-| **DenseNet121**       | 87%            | 86%           | 88%             | 85%            | 89%          | 87%         |
-| **Xception**          | 90%            | 89%           | 91%             | 88%            | 92%          | 90%         |
+
 
 The results show that the hybrid CNN + ViT architecture and the Swin Transformer model offer the best performance compared to individual models. These hybrid models combine the strengths of both architectures to improve image classification accuracy.
 
