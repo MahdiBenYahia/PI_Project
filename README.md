@@ -2,23 +2,23 @@
 
 ## Data Preparation
 
-The data used in this project comes from an image dataset with two categories: **AI** and **human**. The images are divided into training and test sets.
+The data used in this project comes from an image dataset containing two categories: **AI** and **Human**. The images are split into training and testing sets.
 
-### Splitting the Data into Training and Test Sets
+### Train/Test Split
 
-The data is divided into two sets:
+The dataset is divided into two main subsets:
 1. **Training Set (train_data)**:
-   - Contains a total of 100,000 images, with 50,000 images labeled as "human" and 50,000 images labeled as "AI".
-2. **Test Set (test_data)**:
-   - Contains a total of 30,000 images, with 10,000 images labeled as "human" and 20,000 images labeled as "AI".
+   - Contains 100,000 images: 50,000 labeled as "human" and 50,000 labeled as "AI".
+2. **Testing Set (test_data)**:
+   - Contains 30,000 images: 10,000 labeled as "human" and 20,000 labeled as "AI".
 
 ### Data Augmentation
 
-To improve model performance and avoid overfitting, data augmentation is applied to the training set. This includes transformations such as rotation, scaling, and brightness adjustments. Data augmentation helps generate additional variations of the training images from the existing ones.
+To improve model performance and prevent overfitting, data augmentation is applied to the training set. This includes transformations such as rotation, scaling, and brightness adjustment. Augmentation increases the diversity of training examples by generating additional image variations from existing samples.
 
 ## Models and Results
 
-Here is a summary table of the models used in this project, along with their architectures and performance in terms of accuracy, precision, and recall for both the training (Train) and test (Test) sets:
+The table below summarizes the models used in this project along with their architectures and performance metrics in terms of accuracy, precision, and recall for both training and testing:
 
 | Architecture          | Train Accuracy | Test Accuracy | Train Precision | Test Precision | Train Recall | Test Recall |
 |-----------------------|----------------|---------------|-----------------|----------------|--------------|-------------|
@@ -28,9 +28,8 @@ Here is a summary table of the models used in this project, along with their arc
 | **Swin Transformer**  | 92%            | 91%           | 93%             | 90%            | 94%          | 92%         |
 | **ResNet50**          | 86%            | 85%           | 85%             | 83%            | 88%          | 86%         |
 
-
-The results show that the hybrid CNN + ViT architecture and the Swin Transformer model offer the best performance compared to individual models. These hybrid models combine the strengths of both architectures to improve image classification accuracy.
+The results show that the **Swin Transformer** model achieved the best overall performance across all evaluation metrics, outperforming both individual and hybrid architectures. Its strong accuracy, precision, and recall make it particularly suitable for the task of distinguishing real art from AI-generated images.
 
 ## Conclusion
 
-This project set up a complete pipeline for image data preparation for a classification task. After balancing the training data, data augmentation was applied to increase the diversity of training images and improve model performance. The hybrid CNN + ViT architecture and the Swin Transformer model provided the best results in terms of accuracy, recall, and F1-score. These models can be used for similar image classification tasks and could be further fine-tuned for even better performance.
+This project implemented a full pipeline for preparing image data for classification. After balancing the training data, data augmentation was applied to increase training diversity and boost performance. Among all models tested, the **Swin Transformer** demonstrated the best results in terms of accuracy, precision, and recall. It is a strong candidate for similar image classification tasks and can be further fine-tuned for even better performance.
