@@ -116,9 +116,17 @@
         <h3>Predict Painting</h3>
         <form method="POST" action="{% url 'predict' %}" enctype="multipart/form-data">
             {% csrf_token %}
-            <div>
-                <input type="file" name="image" accept="image/*" required>
+            <div style="text-align:center;">
+                <label for="file-upload" class="a-muzze" id="file-label">Choisir un fichier</label>
+                <input id="file-upload" type="file" name="image" accept="image/*" required style="display:none;">
             </div>
+            <script>
+                document.getElementById('file-upload').addEventListener('change', function() {
+                    var fileName = this.files[0] ? this.files[0].name : 'Choisir un fichier';
+                    document.getElementById('file-label').textContent = fileName;
+                });
+                </script>
+                            
             <div>
                 <input type="submit" value="Predict">
             </div>
@@ -127,7 +135,8 @@
     <div class="on-view">
         <aside>
             <div>
-                <h5>   <div id="result" style="font-size:1.5em;"></div></h5>
+                <h5>   <div id="result" style="font-size:1.5em; color:white; center:"></div>
+                </h5>
             </div>
             <div>
             </div>
@@ -160,13 +169,10 @@
         });
     </script>
         
-    <br><br><br><br><br><br>
-    <br><br><br><br>
-    <br>
-    <br><br><br><br>
+    <br><br>
     <footer>
         <section>
-            <figure><img src="{% static 'assest/img/Art_Revivelogo.png' %}" alt=""></figure>
+            <figure><img src="{% static 'assest/img/ArtRevive.png' %}" alt=""></figure>
             <ul>
                 <li>
                     <h4>address</h4>

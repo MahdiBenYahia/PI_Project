@@ -142,31 +142,6 @@
         </aside>
         
     </section>
-    <div class="on-view">
-        <aside>
-            <div>
-                <h3>on view at museum</h3>
-            </div>
-            <div>
-                <ul>
-                    <li> middle eastern art</li>
-                    <li> artifacts and antiquities</li>
-                    <li> traditional art</li>
-                    <li> western & non-western cultures</li>
-                    <li> photograghy</li>
-                    <li> emerging design</li>
-                </ul>
-                <ul>
-                    <li> east asian art</li>
-                    <li> war history</li>
-                    <li> latin american art</li>
-                    <li> gardens</li>
-                    <li> 20th century design</li>
-                    <li> contemporary design</li>
-                </ul>
-            </div>
-        </aside>
-    </div>
     <br><br><br><br><br><br>
     <section class="gallery">
         <h2>Some Amazing Arts</h2>
@@ -258,7 +233,7 @@
                 <h4><a href="#">Classify Paintings</a></h4>
                 <span>Identify whether an artwork is real or AI-generated</span>
                 <span>Using CNN and Transformer-based models</span>
-                <a href="#" class="a-muzze">Explore</a>
+                <a href="{% url 'classify' %}" class="a-muzze">Explore</a>
             </div>
         </div>
         <div>
@@ -296,7 +271,7 @@
         <div>
             <div>
                 <div>
-                    <figure><img src="{% static 'assest/img/img42.jpg' %}" alt=""></figure>
+                    <figure><img src="{% static 'assest/img/AhmedAziz.jpg' %}" alt=""></figure>
                     <div>
                         <h5><a href="">Ahmed Aziz Ammar</a></h5>
                     </div>
@@ -338,9 +313,12 @@
     </div>
     </section>
     <br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     <footer>
         <section>
-            <figure><img src="{% static 'assest/img/Art_Revivelogo.png' %}" alt=""></figure>
+            <figure><img src="{% static 'assest/img/ArtRevive.png' %}" alt=""></figure>
             <ul>
                 <li>
                     <h4>address</h4>
