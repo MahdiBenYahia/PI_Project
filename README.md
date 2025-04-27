@@ -1,26 +1,38 @@
 Monument Image Generation from Textual Prompts This project demonstrates a complete, production-level pipeline for generating realistic and detailed images of monuments based on textual descriptions (text-to-image generation). It integrates data preprocessing, retrieval-augmented generation (RAG) techniques, embedding with FAISS, LoRA fine-tuning of a language model, and Stable Diffusion for image generation.
 Project Structure The workflow is structured into the following main stages:
+
+
 **1.	Data Preprocessing: Matching Images and Descriptions Directories:**
 image_dir: Contains .jpg images of monuments.
 desc_dir: Contains .txt descriptions for each image.
 Matching Process:
 Extract filenames (prefixes) and match each image with its corresponding description.
 Build a paired dataset of {image_path, description}.
+
+
 **2.	Text Chunking for RAG (Retrieval-Augmented Generation) Tool: langchain's RecursiveCharacterTextSplitter**
 Objective:
 Split long descriptions into smaller text chunks (512 characters with 50 overlap).
 Facilitates efficient retrieval during the prompt understanding.
+
+
+
 **3.	Text Embedding and Vector Store Construction (FAISS) Tool: Sentence-Transformers (all-MiniLM-L6-v2) for encoding text.**
 Vector Store:
 Use FAISS (IndexFlatL2) to store and index the description embeddings.
 Retrieval:
 Given a new textual query, retrieve the most semantically similar descriptions using FAISS search.
+
+
+
 **4.	LoRA Fine-Tuning of a Language Model (PEFT) Base Model: mistralai/Mistral-7B-v0.1**
 Fine-Tuning Technique: PEFT (Parameter-Efficient Fine-Tuning) with LoRA (Low-Rank Adaptation).
 Configuration:
 r=8, lora_alpha=32, lora_dropout=0.1, bias=none, task_type=CAUSAL_LM
 Goal:
 Adapt the base LLM with fewer parameters for better understanding and generation related to monument reconstructions.
+
+
 **5.	Image Generation Using Stable Diffusion Model: runwayml/stable-diffusion-v1-5**
 Pipeline: diffusers StableDiffusionPipeline
 Hardware:
