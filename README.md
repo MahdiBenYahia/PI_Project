@@ -53,40 +53,70 @@ login() # Enter your Hugging Face token
 **Key Technologies Used**
 -------------------------------------------------------------------------------------------------------------------------------------
 Technology                     |Purpose
+
 PIL (Pillow)                  | Image loading and saving 
+
 Langchain                     | Text chunking for RAG
+
 Sentence-Transformers         | Text embedding 
+
 FAISS                         |Vector similarity search 
+
 PEFT + LoRA                   |Efficient LLM fine-tuning 
+
 Stable Diffusion (Diffusers)  | Text-to-Image generation
+
 Hugging Face Hub              |Model management 
+
+
+
 **Example Usage**
 After setting up everything, generate a new monument image:
 prompt = "A majestic ancient monument with intricate carvings and large stone columns, partially reconstructed blending historical architecture with modern elements." 
 image = pipe(prompt).images[0]
 image.save("reconstructed_monument.jpg") 
+
+
+
 **Example generated images include:**
 A reddish-pink observatory with sundials.
 A majestic stone castle overlooking the sea.
 A Roman temple with grand arches.
 A Buddhist temple nestled in the mountains.
 
+
+
 **Full Pipeline Diagram:** 
 [Image + Description Data]
+
          ↓   
+         
 [Text Chunking (RAG)] 
+
          ↓ 
+         
 [Text Embedding (MiniLM)]
+
          ↓ 
 [Vector Index (FAISS)] 
+
          ↓ 
+         
 [Prompt Retrieval + Augmentation] 
+
          ↓ 
+         
 [Fine-tuned LLM (Mistral 7B + LoRA)] 
+
          ↓
+         
 [Stable Diffusion Image Generation] 
+
          ↓          
+         
 [Generated Monument Image] 
+
+
 
 **Important Notes Data Sources:**
 Dataset should have a one-to-one mapping between images and textual descriptions.
