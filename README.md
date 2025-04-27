@@ -87,6 +87,8 @@ A Buddhist temple nestled in the mountains.
 
 
 **Full Pipeline Diagram:** 
+
+
 [Image + Description Data]
 
          ↓   
