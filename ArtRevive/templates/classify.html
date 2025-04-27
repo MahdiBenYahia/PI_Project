@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Lora&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
     <header>
         <nav>
@@ -106,7 +105,7 @@
             <section>
                 <div>
                     <h4>Classify</h4>
-<h1>Identify whether an artwork is real or AI-generated</h1>
+                    <h1>Identify whether an artwork is real or AI-generated</h1>
                 </div>
             </section>
         </section>
@@ -124,25 +123,40 @@
                 document.getElementById('file-upload').addEventListener('change', function() {
                     var fileName = this.files[0] ? this.files[0].name : 'Choisir un fichier';
                     document.getElementById('file-label').textContent = fileName;
+                    
+                    // Display the image preview
+                    var file = this.files[0];
+                    var reader = new FileReader();
+                    reader.onloadend = function() {
+                        document.getElementById('image-preview').src = reader.result;
+                    };
+                    if (file) {
+                        reader.readAsDataURL(file);
+                    }
                 });
-                </script>
-                            
+            </script>
+
+            <div style="text-align:center; margin-top: 20px;">
+                <img id="image-preview" src="" alt="Image preview" style="max-width: 300px; max-height: 300px; object-fit: contain;">
+            </div>
+
             <div>
                 <input type="submit" value="Predict">
             </div>
         </form>
     </aside>
+
     <div class="on-view">
         <aside>
             <div>
-                <h5>   <div id="result" style="font-size:1.5em; color:white; center:"></div>
+                <h5>
+                    <div id="result" style="font-size:1.5em; color:white;"></div>
                 </h5>
             </div>
-            <div>
-            </div>
+            <div></div>
         </aside>
     </div>
-    <!-- Ajout de ta section on view pour afficher le résultat -->
+
     <script>
         const form = document.querySelector('form');
         form.addEventListener('submit', async function(e) {
@@ -168,7 +182,7 @@
             }
         });
     </script>
-        
+
     <br><br>
     <footer>
         <section>
@@ -178,10 +192,9 @@
                     <h4>address</h4>
                 </li>
                 <li>
-                    <address>18, rue de l'Usine - ZI Charguia II Airport
-                        2035 Ariana</address>
+                    <address>18, rue de l'Usine - ZI Charguia II Airport 2035 Ariana</address>
                 </li>
-                <li><a href="">geting here</a></li>
+                <li><a href="">getting here</a></li>
             </ul>
             <ul>
                 <li>
@@ -203,15 +216,13 @@
             </ul>
         </section>
         <section>
-            <span><a href=""><i class="demo-icon icon-instagram"></i></a><a href=""><i
-                        class="demo-icon icon-twitter"></i></a>
-                <a href=""><i class="demo-icon icon-facebook"></i></a><a href=""><i class="demo-icon icon-pinterest"></i> </a></span>
+            <span><a href=""><i class="demo-icon icon-instagram"></i></a><a href=""><i class="demo-icon icon-twitter"></i></a>
+                <a href=""><i class="demo-icon icon-facebook"></i></a><a href=""><i class="demo-icon icon-pinterest"></i></a></span>
             <span>Museum Template - Mad UX © 2020. All Rights Reserved</span>
-            <span>pantea javadi 12 july 2022</span>
+            <span>pantea javadi 12 July 2022</span>
         </section>
     </footer>
     <br>
-    
-</body>
 
+</body>
 </html>

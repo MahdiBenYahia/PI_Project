@@ -6,6 +6,7 @@ from django.http import JsonResponse
 import numpy as np
 from PIL import Image
 import io
+from . import forms
 # Load model globally so it isn't reloaded on every request
 model = load_model(settings.MODEL_PATH)
 
@@ -27,27 +28,35 @@ def upload_artwork(request):
     return render(request, 'classify.html', {'form': form})
 
 
+from django.core.files.storage import FileSystemStorage
+
 def predict(request):
     if request.method == 'POST':
         img = request.FILES.get('image')
 
         if img:
-            image = Image.open(img)
-            image = image.resize((128, 128))  # Resize to your model's input size
-            image = np.array(image) / 255.0  # Normalize if needed
-            image = np.expand_dims(image, axis=0)  # Add batch dimension
+            # Sauvegarde de l'image téléchargée
+            fs = FileSystemStorage()
+            filename = fs.save(img.name, img)
+            uploaded_image_url = fs.url(filename)  # URL de l'image enregistrée
 
+            image = Image.open(img)
+            image = image.resize((128, 128))  # Redimensionner à 128x128
+            image = np.array(image) / 255.0  # Normaliser
+            image = np.expand_dims(image, axis=0)  # Ajouter la dimension du batch
+
+            # Prédiction
             prediction = model.predict(image)
-            
-            # Supposons que la classe 1 est 'human' et la classe 0 est 'AI'
             predicted_class = 'human' if prediction[0][0] > 0.5 else 'AI'
 
             result = {
-                'prediction': predicted_class,  # Renvoi de la classe au lieu de la probabilité brute
-                'probability': prediction.tolist()  # Vous pouvez garder la probabilité également
+                'prediction': predicted_class,  # La classe prédite
+                'probability': prediction.tolist(),  # Probabilité
+                'image_url': uploaded_image_url  # URL de l'image téléchargée
             }
             return JsonResponse(result)
 
         return JsonResponse({'error': 'No image uploaded'}, status=400)
 
     return JsonResponse({'error': 'Invalid request method'}, status=400)
+
