@@ -146,17 +146,15 @@
         </form>
     </aside>
 
-    <div class="on-view">
+    <div class="on-view" style="display: flex; justify-content: center; align-items: center; height: 200px; background-color: #333;">
         <aside>
             <div>
                 <h5>
-                    <div id="result" style="font-size:1.5em; color:white;"></div>
+                    <div id="result" style="font-size: 1.5em; color: white; text-align: center;"></div>
                 </h5>
             </div>
-            <div></div>
         </aside>
-    </div>
-
+    </div>    
     <script>
         const form = document.querySelector('form');
         form.addEventListener('submit', async function(e) {
@@ -176,7 +174,7 @@
             const result = await response.json();
         
             if (result.prediction) {
-                document.getElementById('result').innerText = `Prediction: ${result.prediction} (Confidence: ${result.probability})`;
+                document.getElementById('result').innerText = `Prediction: ${result.prediction}`;
             } else {
                 document.getElementById('result').innerText = `Error: ${result.error}`;
             }
