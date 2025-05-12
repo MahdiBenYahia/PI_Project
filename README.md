@@ -44,7 +44,15 @@ jupyter notebook updated_finetune_notebook.ipynb
 -Load & preprocess the dataset
 -Apply LoRA-based fine-tuning
 -Generate new statue images from prompts
+
+
 🖼️ Sample Output
+
+
 prompt :A portrait of Hannibal Barca, the Carthaginian general, in ancient military armor, standing on a rocky cliff overlooking the Alps, with war elephants and Carthaginian soldiers in the background ,historical realism, cinematic style"
+
+result:
+
+
 ![Screenshot hannibal](https://github.com/user-attachments/assets/bfab2fba-8b9d-4552-a485-1b3e25ccd038)
 
