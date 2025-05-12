@@ -1,3 +1,15 @@
 pip install keras  
 pip install tensorflow
 pip install pillow
+torch>=2.0.0
+transformers>=4.30.0
+langchain>=0.0.200
+-U langchain-community
+faiss-cpu>=1.7.2
+django>=4.2.0
+beautifulsoup4>=4.12.0
+wikipedia>=1.4.0
+peft>=0.4.0
+accelerate>=0.20.0
+sentence-transformers>=2.2.0
+datasets

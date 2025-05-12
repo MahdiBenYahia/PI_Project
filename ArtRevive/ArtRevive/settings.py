@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os 
+import torch
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'art_api',
+    'rest_framework',
 ]
+
+ART_PIPELINE_DIR = os.path.join(BASE_DIR, 'art_pipeline')
+MODEL_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,7 +130,6 @@ STATICFILES_DIRS=[BASE_DIR /"static",]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
-import os
 
 # Définir le chemin du modèle
 MODEL_PATH = os.path.join(BASE_DIR, 'models', 'my_swin_model.h5')

@@ -1,0 +1,1 @@
+{"max_new_tokens": 150, "temperature": 0.5, "top_p": 0.85, "do_sample": true, "num_beams": 2}
