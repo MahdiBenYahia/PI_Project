@@ -49,7 +49,7 @@ jupyter notebook updated_finetune_notebook.ipynb
 🖼️ Sample Output
 
 
-prompt :A portrait of Hannibal Barca, the Carthaginian general, in ancient military armor, standing on a rocky cliff overlooking the Alps, with war elephants and Carthaginian soldiers in the background ,historical realism, cinematic style"
+prompt :A portrait of Hannibal Barca, the Carthaginian general, in ancient military armor, standing on a rocky cliff overlooking the Alps, with war horses and Carthaginian soldiers in the background ,historical realism, cinematic style"
 
 result:
 
