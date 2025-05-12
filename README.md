@@ -14,7 +14,9 @@ The training data includes:
 Organized as:
 PI_Project/
 ├── data_diffusion/
+
 │   └── data_prep/
+
 │       ├── images/             
 │       └── descriptions/      
 Each image has a corresponding .txt file with a prompt used for fine-tuning.
