@@ -40,8 +40,18 @@ ArtRevive is a web‑based Heritage Restoration Platform designed to preserve, r
 - **Blender** for manual mesh cleanup and asset refinement  
 
 ## Directory Structure
-
-
+    ```text
+    artrevive/
+    ├── main/
+    ├── 2d_to_3d_conversion/
+    ├── website/
+    ├── art_authentification/
+    ├── artistic_image_generator/
+    ├── generate_description/
+    ├── generate_new_monuments/
+    ├── generate_new_statues/
+    ├── master/
+    └── site/
 
 ## Getting Started
 
@@ -50,8 +60,7 @@ ArtRevive is a web‑based Heritage Restoration Platform designed to preserve, r
    git clone https://github.com/your‑username/artrevive.git
    cd artrevive
 
-   ```bash
-    python -m venv venv
+   python -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
    python manage.py migrate
