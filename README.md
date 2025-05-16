@@ -38,7 +38,6 @@ ArtRevive is a web‑based Heritage Restoration Platform designed to preserve, r
 ### Other Tools
 - **OpenCV** for image preprocessing (resizing, normalization, contour detection)  
 - **Blender** for manual mesh cleanup and asset refinement  
-- **AWS S3** (or DigitalOcean Spaces) for storing large media files and model checkpoints  
 
 ## Directory Structure
 
@@ -51,6 +50,7 @@ ArtRevive is a web‑based Heritage Restoration Platform designed to preserve, r
    git clone https://github.com/your‑username/artrevive.git
    cd artrevive
 
+```bash
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
